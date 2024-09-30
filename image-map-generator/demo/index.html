@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ImageMaps: Image Map Generator Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="data:image/x-icon;," type="image/x-icon" rel="shortcut icon" />
+    <link href="stylesheets/index.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.3/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="../dist/index.umd.js"></script>
+</head>
+<body>
+    <div id="wrap" role="main">
+        <aside>
+            <div>
+                <p>Color</p>
+                <a href="#" class="color btn" data-color="black" style="background-color:black; color:transparent;">Black</a>
+                <a href="#" class="color btn" data-color="white" style="background-color:white; color:transparent;">White</a>
+                <a href="#" class="color btn" data-color="red" style="background-color:red; color:transparent;">Red</a>
+                <a href="#" class="color btn" data-color="green" style="background-color:green; color:transparent;">Green</a>
+                <a href="#" class="color btn" data-color="blue" style="background-color:blue; color:transparent;">Blue</a>
+                <a href="#" class="color btn" data-color="purple" style="background-color:purple; color:transparent;">Purple</a>
+                <a href="#" class="color btn" data-color="yellow" style="background-color:yellow; color:transparent;">Yellow</a>
+            </div>
+            <div class="default_shape shape">
+                <p>Shape Type</p>
+                <a href="#" id="rect" class="btn">Add Rectangle</a>
+                <a href="#" id="circle" class="btn">Add Circle</a>
+            </div>
+            <div class="text_shape shape">
+                <p>Text</p>
+                <label>Size:&nbsp;
+                    <input type="number" id="size" placeholder="-" style="width:60px">
+                </label>
+                <label>Text:&nbsp;
+                    <input type="text" id="text_input" placeholder="Some text" style="width: 150px;">
+                </label>
+                <a href="#" id="text" class="btn">Add Text</a>
+            </div>
+            <div class="remove_shape box">
+                <a href="#" id="remove" class="btn">Remove Shape</a>
+                <a href="#" id="remove_all" class="btn">Remove All Shapes</a>
+                <a href="#" id="view" class="btn maps_view">View Result</a>
+            </div>
+            <div class="add_shape box">
+                <div id="shape_coordinates" class="box">
+                    <h4>Shape Coordinates</h4>
+                    <p id="shape_coordinates_text"></p>
+                </div>
+            </div>
+        </aside>
+    <div class="section">
+            <section id="section1">
+                <div class="_imageMaps_area">
+                    <h3>Editor</h3>
+                    <img alt="Map of Indonesia" src="candi.jpg" class="_image_maps">
+                    <!-- Script g element -->
+                </div>
+            </section>
+            <section id="section2">
+                <div class="_imageMaps_area_view">
+                    <div class="result_view_header">
+                        <h3 class="view_header">View</h3>
+                    </div>
+                    <img alt="Map of Indonesia" src="candi.jpg" class="_image_maps_view">
+               </div>
+          </div>
+     </section>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
